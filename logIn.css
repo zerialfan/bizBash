@@ -1,0 +1,26 @@
+:root{
+    --text-xl: 20px;
+    --text-l: 16px;
+    --text-m: 14px;
+    --black-color:#121212;
+    --yellow-color: #f8f830;
+    --grey:#858585;
+    --font-family:'Inter', sans-serif;
+
+}
+
+body{
+    display: flex;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+.label{
+    width: 393px;
+    height: var(--text-xl);
+}
+
+.label .label-text{
+    position: fixed;
+    width: 393px;
+    
+}
