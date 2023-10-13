@@ -1,0 +1,199 @@
+:root{
+    --text-xl: 32px;
+    --text-l: 20px;
+    --text-m: 18px;
+    --text-ch:14px;
+    --black-color:#121212;
+    --yellow-color: #f8f830;
+    --gray:#858585;
+    --neutral-gray:#f4f4f5;
+    --font-family:'Inter', sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Bloque del boton regresar */
+.back-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 40px;
+    left: 70px;
+}
+
+.back-container .back-nav{
+   position: absolute;
+   top: 6px;
+   left: 30px;
+   font-size: var(--text-m);
+}
+.back-container a{
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: var(--text-l);
+}
+
+/* Comienza bloque de codigo para el logo al centro */
+.back-arrow img{
+    width: 30px;
+    height: 30px;
+}
+figure {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+figure img{
+    margin-top: 30px;
+    width: 280px;
+    height: 160px;
+    flex-shrink: 0;
+    transition: transform 0.3s; /* Animacion del logo */
+}
+
+/* escala de transformacion del logo */
+figure img:hover {
+    transform: scale(1.1); 
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+}
+
+.texth2 h2{
+    font-size: var(--text-xl);
+    font-weight: 600;
+    flex-shrink: 0;
+    text-align: center;
+}
+.textp p{
+    font-size: var(--text-ch);
+    color: var(--gray);
+    padding-top: 25px;
+    text-align: center;
+}
+form #textVerify{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.label {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    align-items: center;
+    justify-content: center;
+}
+.label i {
+    position: absolute;
+    top: 68%;
+    transform: translateY(-55%);
+    left: 180px; 
+    color: var(--gray);
+    font-size: var(--text-m);
+    text-align: center
+}
+
+#verifyCode {
+    left: 0px;
+    padding-left: 60px;
+    margin-top: 12px;
+    height: 30px;
+    font-weight: 500;
+    font-size: var(--text-ch);
+    background-color: var(--neutral-gray);
+    border-radius: 12px;
+    outline: none;
+    border: none;
+}
+
+/* Contenedor para centrar el texto con el radio input */
+.label-radio{
+    display: flex;
+    margin-top: 45px;
+}
+.label-container {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    text-align: center;
+}
+
+/* Estilos para centrar el texto en el contenedor */
+.label-radio p {
+    padding-left: 25px;
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: var(--text-m);
+    color: var(--gray);
+}
+
+/* Estilos iniciales del radio button */
+input[type="radio"] {
+    appearance: none; /*Elimina el estilo predeterminado del input*/
+    width: 14px; /*Tamaño del radio*/
+    height: 14px;
+    border: 1px solid var(--black-color);
+    border-radius: 50%; /* Hace que el radio button sea un círculo */
+    transition: background-color 0.3s ease; /* Agregamos una transición a la propiedad background-color */
+}
+/* Cambiar color del radio */
+input[type="radio"]:checked {
+    background-color: var(--yellow-color);/* Color del interior */
+    border: 2px solid var(--black-color);
+}
+
+/* Animación al pasar el mouse sobre el radio button */
+input[type="radio"]:hover {
+    transform: scale(1.1); /* Animacion*/
+}
+.buttonList input[type="button"] {
+    margin-top: 50px;
+    padding: 16px 58px; /* Ajusta el relleno según sea necesario */
+    font-size: var(--text-ch);
+    background-color: var(--yellow-color);
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+#btnOk {
+    background-color: var(--black-color); /* Fondo distinto para el botón "Recibir código" */
+    color:#ffff;
+    margin-left: 50px;
+    transition: box-shadow 0.1s
+}
+#btnOk:hover{
+    box-shadow: inset 0px 0px 1px 2px rgb(255, 255, 255)
+}
+
+
+#btnCancel {
+    background-color:var(--neutral-gray); /* Fondo distinto para el botón "Cancelar" */
+    margin-left: 30px;
+    transition: box-shadow 0.3s
+}
+#btnCancel:hover {
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.5)
+}
+footer{
+    font-size: var(--text-ch);
+    color: var(--gray);
+    font-weight: 500;
+}
