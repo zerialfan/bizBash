@@ -1,0 +1,115 @@
+:root{
+    --text-xl: 32px;
+    --text-l: 20px;
+    --text-m: 18px;
+    --text-ch:14px;
+    --black-color:#121212;
+    --yellow-color: #f8f830;
+    --gray:#858585;
+    --font-family:'Inter', sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+.back-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 40px;
+    left: 70px;
+}
+
+.back-container .back-nav{
+   position: absolute;
+   top: 6px;
+   left: 30px;
+   font-size: var(--text-m);
+}
+.back-container a{
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: var(--text-l);
+}
+.back-arrow img{
+    width: 30px;
+    height: 30px;
+}
+figure img {
+    transition: transform 0.3s; /* Animacion del logo */
+}
+
+/* escala de transformacion del logo */
+figure img:hover {
+    transform: scale(1.1); 
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    position: absolute;
+    bottom: 20px;
+}
+figure img{
+    padding-top: 20px;
+    padding-right: 25px;
+    width: 280px;
+    height: 160px;
+    flex-shrink: 0;
+}
+.texth2 h2{
+    font-size: var(--text-xl);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+.textp p{
+    font-size: var(--text-ch);
+    color: var(--gray);
+}
+
+.label {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+}
+
+/* Contenedor para centrar el texto con el radio input */
+.label-container {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+
+/* Estilos para centrar el texto en el contenedor */
+.label p {
+    padding-left: 25px;
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    font-size: var(--text-m);
+    color: var(--gray);
+}
+/* Cambiar color del radio */
+input[type="radio"] {
+    appearance: none; /* Oculta el estilo predeterminado del radio button */
+    width: 14px; /* Tamaño deseado del radio button */
+    height: 14px; /* Tamaño deseado del radio button */
+    border: 1px solid var(--black-color); /* Color del borde del radio button */
+    border-radius: 50%; /* Hace que el radio button sea un círculo */
+}
+
+/* Cambia el color del punto interior del radio button cuando está seleccionado */
+input[type="radio"]:checked {
+    background-color: var(--yellow-color); /* Color del interior */
+    border:2px solid var(--black-color);
+}
