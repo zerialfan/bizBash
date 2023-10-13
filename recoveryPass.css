@@ -6,6 +6,7 @@
     --black-color:#121212;
     --yellow-color: #f8f830;
     --gray:#858585;
+    --neutral-gray:#f4f4f5;
     --font-family:'Inter', sans-serif;
 
 }
@@ -44,7 +45,16 @@ body{
     width: 30px;
     height: 30px;
 }
-figure img {
+figure {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+figure img{
+    width: 280px;
+    height: 160px;
+    flex-shrink: 0;
     transition: transform 0.3s; /* Animacion del logo */
 }
 
@@ -60,13 +70,7 @@ footer{
     position: absolute;
     bottom: 20px;
 }
-figure img{
-    padding-top: 20px;
-    padding-right: 25px;
-    width: 280px;
-    height: 160px;
-    flex-shrink: 0;
-}
+
 .texth2 h2{
     font-size: var(--text-xl);
     font-weight: 600;
@@ -99,17 +103,64 @@ figure img{
     font-size: var(--text-m);
     color: var(--gray);
 }
-/* Cambiar color del radio */
+
+/* Estilos iniciales del radio button */
 input[type="radio"] {
-    appearance: none; /* Oculta el estilo predeterminado del radio button */
-    width: 14px; /* Tamaño deseado del radio button */
-    height: 14px; /* Tamaño deseado del radio button */
-    border: 1px solid var(--black-color); /* Color del borde del radio button */
+    appearance: none; /*Elimina el estilo predeterminado del input*/
+    width: 14px; /*Tamaño del radio*/
+    height: 14px;
+    border: 1px solid var(--black-color);
     border-radius: 50%; /* Hace que el radio button sea un círculo */
+    transition: background-color 0.3s ease; /* Agregamos una transición a la propiedad background-color */
+}
+/* Cambiar color del radio */
+input[type="radio"]:checked {
+    background-color: var(--yellow-color);/* Color del interior */
+    border: 2px solid var(--black-color);
 }
 
-/* Cambia el color del punto interior del radio button cuando está seleccionado */
-input[type="radio"]:checked {
-    background-color: var(--yellow-color); /* Color del interior */
-    border:2px solid var(--black-color);
+/* Animación al pasar el mouse sobre el radio button */
+input[type="radio"]:hover {
+    transform: scale(1.1); /* Animacion*/
+}
+.buttonList {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Centra los botones verticalmente */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+.buttonList input[type="button"] {
+    padding: 16px 28px; /* Ajusta el relleno según sea necesario */
+    font-size: var(--text-ch);
+    background-color: var(--yellow-color);
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+#btnOk {
+    background-color: var(--black-color); /* Fondo distinto para el botón "Recibir código" */
+    color:#ffff;
+    margin-left: 50px;
+    transition: box-shadow 0.1s
+}
+#btnOk:hover{
+    box-shadow: inset 0px 0px 1px 2px rgb(255, 255, 255)
+}
+
+
+#btnCancel {
+    background-color:var(--neutral-gray); /* Fondo distinto para el botón "Cancelar" */
+    margin-left: 30px;
+    transition: box-shadow 0.3s
+}
+#btnCancel:hover {
+    box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.5)
+}
+footer{
+    font-size: var(--text-ch);
+    color: var(--gray);
+    font-weight: 500;
 }
