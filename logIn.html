@@ -8,25 +8,43 @@
     <link rel="preconnect"  href="https://fonts.gstatic. com" crossorigin>
     <link href="https://fonts.  googleapis.com/css2?  family=Inter:wght@300;500&    display=swap"   rel="stylesheet">
     <link rel="stylesheet" href="logIn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="label">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="vuesax_bold_arrow-left" clip-path="url(#clip0_401_1813)">
-        <g id="arrow-left">
-        <path id="Vector" d="M13.977 5.31992L10.767 8.52992L8.80005 10.4899C8.40153 10.8894 8.17773 11.4306 8.17773 11.9949C8.17773 12.5592 8.40153 13.1004 8.80005 13.4999L13.98 18.6799C14.1309 18.83 14.3227 18.9321 14.5314 18.9734C14.7401 19.0148 14.9563 18.9935 15.153 18.9123C15.3496 18.8311 15.5179 18.6935 15.6365 18.517C15.7552 18.3404 15.8191 18.1327 15.82 17.9199V6.07992C15.8206 5.86613 15.7576 5.65699 15.6389 5.47916C15.5202 5.30133 15.3513 5.16284 15.1536 5.08133C14.956 4.99983 14.7385 4.97899 14.529 5.02148C14.3195 5.06397 14.1273 5.16786 13.977 5.31992Z" fill="#292D32"/>
-        </g>
-        </g>
-        <defs>
-        <clipPath id="clip0_401_1813">
-        <rect width="24" height="24" fill="white"/>
-        </clipPath>
-        </defs>
-        </svg>
+    <div class="back-container">
+        <div class="backSVG">
+            <a href=""><img src="./Iconos/vuesax_bold_arrow_left.png" alt=""></a>
         </div>
-    <div class="label">
-        <div class="label-text">Regresar</div>
+        <div class="backP"> <a href="http://" target="_blank" rel="noopener noreferrer">Regresar</a></div>
     </div>
-    
+
+<!-- Este form es el contenedor padre de todo el log in -->
+    <form action="">
+        <figure>
+            <img src="./Iconos/logo.png" alt="logo de la empresa">
+        </figure>
+<!-- los coloco en cajas div para que sean mas faciles de manipular como cajas y no como lineas -->
+        <div class="texth2">
+            <h2>Iniciar sesión</h2>
+        </div>
+        <div class="textp">
+            <p>Portal de comercio para empresas de la industria</p>
+        </div>
+        <label for="username" class="label"> 
+            <i class="fa-solid fa-user"></i>
+            Correo electrónico
+            <input type="text" id="username" placeholder="ejemplo@mail.com">
+        </label>
+        <label for="password" class="label">
+            <i class="fa-solid fa-lock"></i>
+            Contraseña
+            <input type="password" id="password" placeholder="Escribe tu contraseña">
+        </label>
+        <a href="#">Olvidé mi contraseña</a>
+        <input type="button" value="iniciar sesión" id="btn">
+    </form>
+    <footer>
+        <p>© 2023 Bizmo, All rights reserved.</p>
+    </footer>
 </body>
 </html>
